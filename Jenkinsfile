@@ -9,7 +9,7 @@ pipeline {
         }
         stage('SCM checkout'){
             steps{
-                sh 'git clone https://github.com/joebadmus/june2020_singup_project.git codebase'
+                sh 'git clone https://github.com/joebadmus/june2020_singup_project.git -b develop codebase'
             }
         }
 
