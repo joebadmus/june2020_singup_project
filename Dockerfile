@@ -8,6 +8,8 @@ WORKDIR /usr/src/app
 RUN apk update
 
 # set environment variables
+ENV AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+ENV AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
 ENV AWS_REGION eu-west-2 
 ENV STARTUP_SIGNUP_TABLE dev-user-signup-dynamo
 ENV NEW_SIGNUP_TOPIC arn:aws:sns:eu-west-2:735287868690:dev-user-signup-topic
